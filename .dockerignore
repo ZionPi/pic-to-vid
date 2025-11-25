@@ -1,0 +1,12 @@
+__pycache__
+*.pyc
+.git
+.gitignore
+.dockerignore
+venv
+.env
+README.md
+FAQ.md
+Makefile
+docker-compose.yml
+app/static/output

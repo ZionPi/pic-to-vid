@@ -1,0 +1,10 @@
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+python-multipart>=0.0.9
+jinja2>=3.1.3
+# 关键：锁定 MoviePy 为 1.x 版本
+moviepy<2.0.0
+# 关键：锁定 Numpy 防止冲突
+numpy<2.0.0
+proglog
+pillow

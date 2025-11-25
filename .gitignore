@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.env
+venv/
+.DS_Store
+app/temp/    <-- 别把测试生成的临时视频传上去

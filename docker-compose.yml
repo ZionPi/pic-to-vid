@@ -1,0 +1,17 @@
+services:
+  web:
+    build: .
+    container_name: pic-to-vid-container
+    ports:
+      - "8123:8123"
+    volumes:
+      - ./app:/app/app:ro # 代码映射，方便热重载 (ro=read only)
+    environment:
+      - MAX_UPLOAD_SIZE=50 # 预留配置：最大上传 MB
+    restart: unless-stopped
+    # 资源限制 (视频生成比较吃资源，防止把 WSL2 跑挂)
+    deploy:
+      resources:
+        limits:
+          cpus: "2.0"
+          memory: 2G
