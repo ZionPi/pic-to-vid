@@ -25,22 +25,30 @@ make docker-up
 2. 使用工具
    打开浏览器访问：http://localhost:8123
 3. 常用命令
-   code
-   Bash
+
+   ```
    make docker-logs # 查看日志
+
    make docker-down # 停止服务
+
    make clean # 清理临时文件
+   ```
+
    🛠️ 本地开发
    需要安装 ffmpeg 系统库。
-   code
-   Bash
 
 # 1. 安装 Python 依赖
 
+```
 make install
+```
 
 # 2. 启动服务
 
+```
 make run
-License
+```
+
+# License
+
 MIT License
