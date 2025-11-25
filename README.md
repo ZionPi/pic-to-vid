@@ -2,7 +2,7 @@
 
 > 将碎片化的图片瞬间“熔炼”成适合微信分享的 MP4 视频。
 
-![Python](https://img.shields.io/badge/Python-3.13-blue) ![MoviePy](https://img.shields.io/badge/Video-MoviePy-ff0080) ![Docker](https://img.shields.io/badge/Docker-Compose_V2-2496ED)
+![Python](https://img.shields.io/badge/Python-3.11-brightgreen) ![Compatibility](https://img.shields.io/badge/Python_3.13-Not_Supported-red) ![MoviePy](https://img.shields.io/badge/Video-MoviePy-ff0080) ![Docker](https://img.shields.io/badge/Docker-Compose_V2-2496ED)
 
 ## ✨ 核心特性
 
@@ -34,18 +34,33 @@ make docker-up
    make clean # 清理临时文件
    ```
 
-   🛠️ 本地开发
-   需要安装 ffmpeg 系统库。
+## 🛠️ 本地开发 (Local Development)
 
-# 1. 安装 Python 依赖
+如果你不使用 Docker，想在宿主机直接运行，请务必注意 Python 版本。
 
+### 1. 环境准备
+
+> **注意**：请务必使用 **Python 3.11**。
+> Python 3.13+ 版本目前会导致 `moviepy` 和 `numpy` 安装失败。
+
+如果你使用 Conda：
+
+```bash
+conda create -n pic-to-vid python=3.11 -y
+conda activate pic-to-vid
 ```
+
+### 2. 安装依赖
+
+```bash
 make install
+# 或者
+pip install -r requirements.txt
 ```
 
-# 2. 启动服务
+### 3. 启动服务
 
-```
+```bash
 make run
 ```
 
